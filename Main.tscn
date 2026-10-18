@@ -1,3 +1,15 @@
 [gd_scene format=3 uid="uid://dutndvp3wdgkl"]
 
+[ext_resource type="PackedScene" uid="uid://5ras1ggsqrte" path="res://Ocean.tscn" id="1_r0du0"]
+[ext_resource type="PackedScene" uid="uid://ddyjvfduvvrk8" path="res://island.tscn" id="2_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://dem5xqcsi4w4j" path="res://Player.tscn" id="3_fos0i"]
+
 [node name="Main" type="Node2D" unique_id=1235547916]
+
+[node name="Ocean" parent="." unique_id=946612665 instance=ExtResource("1_r0du0")]
+
+[node name="Island" parent="Ocean" unique_id=1908697329 instance=ExtResource("2_cm0pq")]
+position = Vector2(-163, 9)
+
+[node name="Node2D" parent="Ocean/Island" unique_id=1448222118 instance=ExtResource("3_fos0i")]
+position = Vector2(73, 119)
