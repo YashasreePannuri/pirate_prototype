@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dem5xqcsi4w4j"]
+
+[ext_resource type="Script" uid="uid://cwlejjvxo2da8" path="res://player.gd" id="1_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://tnh3ewnemui" path="res://kenney_monochrome-pirates/Default/Tiles/tile_0126.png" id="2_kne1u"]
+[ext_resource type="Script" uid="uid://byei3k03h1esu" path="res://raft.gd" id="3_e80uo"]
+[ext_resource type="Texture2D" uid="uid://pesy40yl55wm" path="res://kenney_monochrome-pirates/Default/Tiles/tile_0101.png" id="4_cxr5p"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tdg3f"]
+load_path = "res://.godot/imported/tile_0100.png-85004c765d371e9e73e243ef57b41a5e.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ncpa"]
+size = Vector2(100.5, 40.5)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fbtot"]
+radius = 26.0
+height = 72.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhp63"]
+radius = 26.0
+height = 76.0
+
+[node name="Node2D" type="Node2D" unique_id=1448222118]
+
+[node name="Raft" type="CharacterBody2D" parent="." unique_id=637325558]
+script = ExtResource("3_e80uo")
+
+[node name="Sprite2D" type="Sprite2D" parent="Raft" unique_id=474211585]
+position = Vector2(224, 63)
+scale = Vector2(2.84375, 2.6562502)
+texture = SubResource("CompressedTexture2D_tdg3f")
+
+[node name="Sprite2D" type="Sprite2D" parent="Raft/Sprite2D" unique_id=1851336012]
+position = Vector2(17.806452, -3.8146973e-06)
+scale = Vector2(1.2326103, 0.9802089)
+texture = ExtResource("4_cxr5p")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Raft/Sprite2D" unique_id=483354427]
+position = Vector2(7.0329666, -10.164704)
+scale = Vector2(1.1373627, 1.4647058)
+texture = ExtResource("2_kne1u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Raft" unique_id=757274098]
+position = Vector2(249.75, 64.75)
+shape = SubResource("RectangleShape2D_5ncpa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Raft/CollisionShape2D" unique_id=1258195355]
+position = Vector2(-5.75, -28.75)
+shape = SubResource("CapsuleShape2D_fbtot")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=2071386349]
+script = ExtResource("1_kpjcp")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=927732390]
+position = Vector2(0.9999995, 0.9999995)
+scale = Vector2(3.3124983, 3.687499)
+texture = ExtResource("2_kne1u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=829474199]
+position = Vector2(1, -4)
+shape = SubResource("CapsuleShape2D_qhp63")
