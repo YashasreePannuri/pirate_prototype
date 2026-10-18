@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dem5xqcsi4w4j"]
+
+[ext_resource type="Script" uid="uid://cwlejjvxo2da8" path="res://player.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://tnh3ewnemui" path="res://kenney_monochrome-pirates/Default/Tiles/tile_0126.png" id="2_epypp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhp63"]
+radius = 26.0
+height = 76.0
+
+[node name="Node2D" type="Node2D" unique_id=1448222118]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=2071386349]
+script = ExtResource("1_0e48y")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=927732390]
+position = Vector2(0.9999995, 0.9999995)
+scale = Vector2(3.3124983, 3.687499)
+texture = ExtResource("2_epypp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=829474199]
+position = Vector2(1, 0)
+shape = SubResource("CapsuleShape2D_qhp63")
