@@ -2,14 +2,27 @@
 
 [ext_resource type="PackedScene" uid="uid://5ras1ggsqrte" path="res://Ocean.tscn" id="1_r0du0"]
 [ext_resource type="PackedScene" uid="uid://ddyjvfduvvrk8" path="res://island.tscn" id="2_cm0pq"]
+[ext_resource type="Script" uid="uid://j2sdkdqkqc8o" path="res://island.gd" id="3_cm0pq"]
 [ext_resource type="PackedScene" uid="uid://dem5xqcsi4w4j" path="res://Player.tscn" id="3_fos0i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbtot"]
+size = Vector2(965, 509)
 
 [node name="Main" type="Node2D" unique_id=1235547916]
 
 [node name="Ocean" parent="." unique_id=946612665 instance=ExtResource("1_r0du0")]
 
 [node name="Island" parent="Ocean" unique_id=1908697329 instance=ExtResource("2_cm0pq")]
-position = Vector2(-163, 9)
+position = Vector2(-253, 9)
+script = ExtResource("3_cm0pq")
 
 [node name="Node2D" parent="Ocean/Island" unique_id=1448222118 instance=ExtResource("3_fos0i")]
-position = Vector2(73, 119)
+position = Vector2(-317, 143)
+
+[node name="Area2D" type="Area2D" parent="Ocean/Island" unique_id=1937108137]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ocean/Island/Area2D" unique_id=1062898039]
+position = Vector2(547.5, 269.5)
+shape = SubResource("RectangleShape2D_fbtot")
+
+[node name="Objects" parent="." unique_id=1721339742 instance=ExtResource("3_fos0i")]

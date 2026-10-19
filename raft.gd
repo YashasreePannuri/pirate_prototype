@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 @export var speed = 400
+@export var player:CharacterBody2D
+@export var player_pos:Vector2
 var screen_size
 
 func _ready():
