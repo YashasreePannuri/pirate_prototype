@@ -6,9 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://dem5xqcsi4w4j" path="res://Player.tscn" id="3_fos0i"]
 [ext_resource type="PackedScene" uid="uid://cfdri8bcalr2l" path="res://island_2.tscn" id="4_cm0pq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbtot"]
-size = Vector2(965, 509)
-
 [node name="Main" type="Node2D" unique_id=1235547916]
 
 [node name="Ocean" parent="." unique_id=946612665 instance=ExtResource("1_r0du0")]
@@ -18,9 +15,9 @@ position = Vector2(-253, 9)
 script = ExtResource("3_cm0pq")
 
 [node name="Node2D" parent="Ocean/Island" unique_id=1448222118 instance=ExtResource("3_fos0i")]
-
 position = Vector2(73, 119)
 
 [node name="Island2" parent="Ocean" unique_id=1602420963 instance=ExtResource("4_cm0pq")]
 position = Vector2(-1637, 588)
->>>>>>> ef756cfc01cf2bc6d40398507d2483e0e06e653b
+
+[node name="Objects" parent="." unique_id=883199282 instance=ExtResource("3_fos0i")]
