@@ -5,7 +5,9 @@
 [node name="Ocean" type="Node2D" unique_id=946612665]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=996087964]
-offset_right = 787.0
-offset_bottom = 530.0
+offset_left = -2187.0
+offset_top = -1005.0
+offset_right = 2019.0
+offset_bottom = 1566.0
 texture = ExtResource("1_sberu")
 stretch_mode = 1
