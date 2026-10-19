@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://do1824dx65l6k"]
+
+[ext_resource type="Script" uid="uid://n0jn4ovay5vj" path="res://dialogue_manager.gd" id="1_jbixp"]
+[ext_resource type="Texture2D" uid="uid://cd7mc3geydkq1" path="res://kenney_monochrome-pirates/Default/Tiles/pirate1_256p.png" id="2_516v5"]
+
+[sub_resource type="FontFile" id="FontFile_jbixp"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/15/0/ascent = 0.0
+cache/0/15/0/descent = 0.0
+cache/0/15/0/underline_position = 0.0
+cache/0/15/0/underline_thickness = 0.0
+cache/0/15/0/scale = 1.0
+cache/0/36/0/ascent = 0.0
+cache/0/36/0/descent = 0.0
+cache/0/36/0/underline_position = 0.0
+cache/0/36/0/underline_thickness = 0.0
+cache/0/36/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_fbtot"]
+font = SubResource("FontFile_jbixp")
+font_size = 36
+
+[node name="DialogueManager" type="CanvasLayer" unique_id=546855103]
+process_mode = 3
+script = ExtResource("1_jbixp")
+
+[node name="DialogueBox" type="Control" parent="." unique_id=1775684722]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="DialogueBox" unique_id=429651716]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.025840001, 0.025840001, 0.025840001, 0.5)
+
+[node name="DialogueText" type="Label" parent="DialogueBox" unique_id=917980623]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -337.0
+offset_top = -98.0
+offset_right = 564.0
+offset_bottom = 91.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Where am I?"
+label_settings = SubResource("LabelSettings_fbtot")
+
+[node name="TextureRect" type="TextureRect" parent="DialogueBox" unique_id=2111072521]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -202.0
+offset_right = 255.0
+offset_bottom = 54.0
+grow_vertical = 0
+scale = Vector2(0.8399994, 0.8000012)
+texture = ExtResource("2_516v5")
