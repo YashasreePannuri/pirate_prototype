@@ -10,5 +10,5 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	player_pos = player.global_position
-	if $Area2D.overlaps_body(player) == false:
+	if not $Area2D.overlaps_body(player):
 		raft_pos = player_pos
