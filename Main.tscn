@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://5ras1ggsqrte" path="res://Ocean.tscn" id="1_r0du0"]
 [ext_resource type="PackedScene" uid="uid://ddyjvfduvvrk8" path="res://island.tscn" id="2_cm0pq"]
 [ext_resource type="PackedScene" uid="uid://dem5xqcsi4w4j" path="res://Player.tscn" id="3_fos0i"]
+[ext_resource type="PackedScene" uid="uid://cfdri8bcalr2l" path="res://island_2.tscn" id="4_cm0pq"]
 
 [node name="Main" type="Node2D" unique_id=1235547916]
 
@@ -13,3 +14,6 @@ position = Vector2(-163, 9)
 
 [node name="Node2D" parent="Ocean/Island" unique_id=1448222118 instance=ExtResource("3_fos0i")]
 position = Vector2(73, 119)
+
+[node name="Island2" parent="Ocean" unique_id=1602420963 instance=ExtResource("4_cm0pq")]
+position = Vector2(-1637, 588)
