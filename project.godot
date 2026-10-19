@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="pirate_prototype"
-run/main_scene="uid://dem5xqcsi4w4j"
+run/main_scene="uid://dutndvp3wdgkl"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
