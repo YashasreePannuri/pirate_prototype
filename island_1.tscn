@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://lu20xnlt2rdu" path="res://kenney_monochrome-pirates/Default/Tilemap/tilemap_packed.png" id="1_bndq1"]
 [ext_resource type="Texture2D" uid="uid://bpadji7x68by7" path="res://kenney_monochrome-pirates/Default/Tilemap/tilemap_corner_edit.png" id="2_7c7up"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hdtfb"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bndq1"]
 texture = ExtResource("1_bndq1")
 0:0/0 = 0
 1:0/0 = 0
@@ -143,9 +143,9 @@ texture = ExtResource("1_bndq1")
 16:7/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_o27yn"]
-sources/0 = SubResource("TileSetAtlasSource_hdtfb")
+sources/0 = SubResource("TileSetAtlasSource_bndq1")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qurb2"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7c7up"]
 texture = ExtResource("2_7c7up")
 0:0/0 = 0
 2:0/0 = 0
@@ -173,9 +173,9 @@ texture = ExtResource("2_7c7up")
 7:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_h062a"]
-sources/1 = SubResource("TileSetAtlasSource_qurb2")
+sources/1 = SubResource("TileSetAtlasSource_7c7up")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fgmf3"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ti27t"]
 texture = ExtResource("1_bndq1")
 0:0/0 = 0
 1:0/0 = 0
@@ -315,7 +315,7 @@ texture = ExtResource("1_bndq1")
 3:6/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_yxgae"]
-sources/0 = SubResource("TileSetAtlasSource_fgmf3")
+sources/0 = SubResource("TileSetAtlasSource_ti27t")
 
 [node name="Island1" type="Node2D" unique_id=1908697329]
 
