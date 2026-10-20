@@ -12,15 +12,12 @@ collision_mask = 3
 script = ExtResource("1_onrkg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=618832976]
-position = Vector2(400, 400)
 scale = Vector2(1.2343745, 1.5781249)
 texture = ExtResource("2_i3pqv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=668865939]
-position = Vector2(400, 400)
 shape = SubResource("CapsuleShape2D_trn2v")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=1336780968]
-position = Vector2(400.00003, 400.00003)
 scale = Vector2(1.0000001, 1.0000001)
 zoom = Vector2(2, 2)

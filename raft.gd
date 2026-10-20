@@ -4,7 +4,8 @@ extends CharacterBody2D
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var enter_hint_label: Label = $Label
 @export var speed = 200
-var activePlayer = false
+
+var activePlayer = false # Represents whether player is in raft or not- starts false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,13 +21,13 @@ func _control_raft():
 	var player = get_tree().get_first_node_in_group("player")
 	activePlayer = true
 	$Camera2.make_current()
-	player.queue_free()
+	player.queue_free() # Delete the player - now we are the raft
 	
 func _leave_raft():
-	var player = preload("res://Player.tscn").instantiate()
+	var player = preload("res://Player.tscn").instantiate() # Bring the player back
 	activePlayer = false
-	get_tree().current_scene.add_child(player)
-	player.global_position = global_position
+	get_tree().current_scene.add_child(player) # Add the player back
+	player.global_position = global_position # Change the players' position to the rafts
 
 
 func _physics_process(delta):
