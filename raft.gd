@@ -1,14 +1,41 @@
 extends CharacterBody2D
 
-
+@onready var raft_image: Sprite2D = $RaftImage
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
+@onready var enter_hint_label: Label = $Label
+@export var speed = 200
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _ready():
+	enter_hint_label.visible = false
+	
+func _input(event):
+	if event.is_action_pressed("interaction") && event.is_pressed() && enter_hint_label.visible:
+		_control_raft()
+	elif activePlayer && event.is_action_pressed("interaction") && event.is_pressed():
+		_leave_raft()
+
+func _control_raft():
+	var player = get_tree().get_first_node_in_group("player")
+	activePlayer = true
+	player.queue_free()
+	
+func _leave_raft():
+	var player = preload("res://Player.tscn").instantiate()
+	
+	activePlayer = false
+	get_tree().current_scene.add_child(player)
+	player.global_position = global_position
+	
+var activePlayer = false
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
+func _physics_process(delta):
+	if not activePlayer: return
+	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	velocity = direction * speed
+
+	move_and_slide()
+
 
 #@export var speed = 400
 #@export var player:CharacterBody2D
@@ -31,3 +58,13 @@ func _process(_delta: float) -> void:
 		#
 	#position += velocity * delta
 	#position = position.clamp(Vector2.ZERO, screen_size)
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body == get_tree().get_first_node_in_group("player"):
+		enter_hint_label.show()
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body == get_tree().get_first_node_in_group("player"):
+		enter_hint_label.hide()
