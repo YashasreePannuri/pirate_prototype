@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cfdri8bcalr2l" path="res://island_2.tscn" id="4_cm0pq"]
 [ext_resource type="PackedScene" uid="uid://bqg14kmqoheey" path="res://raft.tscn" id="5_lgr22"]
 [ext_resource type="PackedScene" uid="uid://dem5xqcsi4w4j" path="res://player.tscn" id="6_3dxm6"]
+[ext_resource type="PackedScene" uid="uid://keov44fxx27l" path="res://player2.tscn" id="6_lgr22"]
 
 [node name="Main" type="Node2D" unique_id=1235547916]
 
@@ -21,3 +22,6 @@ position = Vector2(223, -41)
 
 [node name="Player" parent="." unique_id=619771043 instance=ExtResource("6_3dxm6")]
 position = Vector2(113, 92)
+
+[node name="Player2" parent="." unique_id=1306666116 instance=ExtResource("6_lgr22")]
+position = Vector2(-1042, 847)

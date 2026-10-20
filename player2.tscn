@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://keov44fxx27l"]
+
+[ext_resource type="Texture2D" uid="uid://cp5rgcw10k50b" path="res://kenney_monochrome-pirates/Default/Tiles/tile_0127.png" id="1_i25i0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rihsh"]
+
+[node name="Player2" type="CharacterBody2D" unique_id=1306666116]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=985720522]
+scale = Vector2(1.234, 1.578)
+texture = ExtResource("1_i25i0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1296971300]
+shape = SubResource("CapsuleShape2D_rihsh")
