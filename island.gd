@@ -15,3 +15,16 @@ func _process(_delta: float) -> void:
 	#player_pos = player.global_position
 	#if not $Area2D.overlaps_body(player):
 		#raft_pos = player_pos
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	var raft = get_tree().get_first_node_in_group("raft")
+	if body == raft:
+		raft.nearIsland = true
+		raft.exit_hint_label.show()
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	var raft = get_tree().get_first_node_in_group("raft")
+	if body == raft:
+		raft.nearIsland = false
+		raft.exit_hint_label.hide()

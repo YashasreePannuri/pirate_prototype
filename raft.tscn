@@ -10,7 +10,7 @@ load_path = "res://.godot/imported/tile_0100.png-85004c765d371e9e73e243ef57b41a5
 size = Vector2(44.125, 21.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h062a"]
-size = Vector2(20, 34)
+size = Vector2(61, 34)
 
 [node name="Raft" type="CharacterBody2D" unique_id=771783723]
 script = ExtResource("1_llxdh")
@@ -33,7 +33,7 @@ shape = SubResource("RectangleShape2D_20pc6")
 position = Vector2(17, -38)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/Area2D" unique_id=145660564]
-position = Vector2(-38, 37)
+position = Vector2(-17.5, 37)
 shape = SubResource("RectangleShape2D_h062a")
 debug_color = Color(0.9759838, 0.09663724, 0.31532618, 0.41960785)
 
@@ -43,6 +43,12 @@ offset_top = 2.0
 offset_right = 19.0
 offset_bottom = 25.0
 text = "E"
+
+[node name="Label2" type="Label" parent="." unique_id=2060643146]
+offset_left = -17.5
+offset_top = 37.0
+offset_right = 22.5
+offset_bottom = 60.0
 
 [node name="Camera2" type="Camera2D" parent="." unique_id=1698854839]
 zoom = Vector2(2, 2)
