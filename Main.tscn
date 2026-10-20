@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dem5xqcsi4w4j" path="res://player.tscn" id="6_3dxm6"]
 
 [node name="Main" type="Node2D" unique_id=1235547916]
+position = Vector2(2, 0)
 
 [node name="Ocean" parent="." unique_id=946612665 instance=ExtResource("1_r0du0")]
 

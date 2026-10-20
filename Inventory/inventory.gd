@@ -14,7 +14,6 @@ func _ready() -> void:
 		
 		for y in range(col_size):
 			items[x].append([])
-			
 			var instance = ITEM_SLOT.instantiate()
 			instance.global_position = Vector2(x*50,y*50)
 			instance.slot_num = Vector2i(x,y)
