@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c81ffcxlpiake"
-path="res://.godot/imported/tile_0119.png-bbcac1f6d51d51186d0d488e25426f4e.ctex"
+path="res://.godot/imported/tile_0119.png-18162f5345982bab271970fd70b22423.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://kenney_monochrome-pirates/Default/Tiles/tile_0119.png"
-dest_files=["res://.godot/imported/tile_0119.png-bbcac1f6d51d51186d0d488e25426f4e.ctex"]
+source_file="res://Items/item_art/tile_0119.png"
+dest_files=["res://.godot/imported/tile_0119.png-18162f5345982bab271970fd70b22423.ctex"]
 
 [params]
 

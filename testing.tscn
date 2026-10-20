@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c4gxib0acuy2g"]
+
+[ext_resource type="PackedScene" uid="uid://b0cu0w3kc81jy" path="res://Inventory/inventory.tscn" id="1_qrja6"]
+[ext_resource type="PackedScene" uid="uid://di4dqjfbmopg7" path="res://Items/items_scene/fish.tscn" id="2_co24e"]
+
+[node name="Testing" type="Node2D" unique_id=421747174]
+
+[node name="Inventory" parent="." unique_id=2119538027 instance=ExtResource("1_qrja6")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=794553243]
+
+[node name="Fish" parent="." unique_id=1224243082 instance=ExtResource("2_co24e")]
+
+[node name="Fish2" parent="." unique_id=359458509 instance=ExtResource("2_co24e")]
