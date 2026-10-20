@@ -8,6 +8,7 @@ extends CharacterBody2D
 
 var activePlayer = false # Represents whether player is in raft or not- starts false
 var nearIsland = false # Represents if we are near an island
+var current_island = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -31,8 +32,12 @@ func _leave_raft():
 	var player = preload("res://Player.tscn").instantiate() # Bring the player back
 	activePlayer = false
 	get_tree().current_scene.add_child(player) # Add the player back
-	player.global_position = global_position # Change the players' position to the rafts
-
+	
+	var centre = current_island.get_node("Centre")
+	var direction = (centre.global_position - global_position).normalized()
+	player.global_position = global_position + direction * 100
+	
+	exit_hint_label.hide()
 
 
 func _physics_process(delta):

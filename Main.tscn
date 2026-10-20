@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://5ras1ggsqrte" path="res://Ocean.tscn" id="1_r0du0"]
 [ext_resource type="PackedScene" uid="uid://ddyjvfduvvrk8" path="res://island.tscn" id="2_cm0pq"]
-[ext_resource type="Script" uid="uid://j2sdkdqkqc8o" path="res://island.gd" id="3_cm0pq"]
 [ext_resource type="PackedScene" uid="uid://cfdri8bcalr2l" path="res://island_2.tscn" id="4_cm0pq"]
 [ext_resource type="PackedScene" uid="uid://bqg14kmqoheey" path="res://raft.tscn" id="5_lgr22"]
 [ext_resource type="PackedScene" uid="uid://dem5xqcsi4w4j" path="res://player.tscn" id="6_3dxm6"]
@@ -13,11 +12,12 @@
 
 [node name="Island1" parent="." unique_id=1908697329 instance=ExtResource("2_cm0pq")]
 position = Vector2(-253, 9)
-script = ExtResource("3_cm0pq")
 
 [node name="Island2" parent="." unique_id=1602420963 instance=ExtResource("4_cm0pq")]
 position = Vector2(-1637, 588)
 
 [node name="Raft" parent="." unique_id=771783723 instance=ExtResource("5_lgr22")]
+position = Vector2(223, -41)
 
 [node name="Player" parent="." unique_id=619771043 instance=ExtResource("6_3dxm6")]
+position = Vector2(113, 92)
