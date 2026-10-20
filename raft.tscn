@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bqg14kmqoheey"]
+
+[ext_resource type="Script" uid="uid://byei3k03h1esu" path="res://raft.gd" id="1_llxdh"]
+[ext_resource type="Texture2D" uid="uid://pesy40yl55wm" path="res://kenney_monochrome-pirates/Default/Tiles/tile_0101.png" id="2_ippya"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wkp8b"]
+load_path = "res://.godot/imported/tile_0100.png-85004c765d371e9e73e243ef57b41a5e.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_20pc6"]
+size = Vector2(44.125, 21.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h062a"]
+size = Vector2(20, 34)
+
+[node name="Raft" type="CharacterBody2D" unique_id=771783723]
+script = ExtResource("1_llxdh")
+
+[node name="RaftImage" type="Sprite2D" parent="." unique_id=1072424757]
+position = Vector2(-28.374992, 38.374996)
+scale = Vector2(1.2968739, 1.3281249)
+texture = SubResource("CompressedTexture2D_wkp8b")
+
+[node name="Sprite2D" type="Sprite2D" parent="RaftImage" unique_id=606080648]
+position = Vector2(17.806452, -3.8146973e-06)
+scale = Vector2(1.2326103, 0.9802089)
+texture = ExtResource("2_ippya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=656989607]
+position = Vector2(-17, 38)
+shape = SubResource("RectangleShape2D_20pc6")
+
+[node name="Area2D" type="Area2D" parent="CollisionShape2D" unique_id=41072271]
+position = Vector2(17, -38)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/Area2D" unique_id=145660564]
+position = Vector2(-38, 37)
+shape = SubResource("RectangleShape2D_h062a")
+debug_color = Color(0.9759838, 0.09663724, 0.31532618, 0.41960785)
+
+[node name="Label" type="Label" parent="." unique_id=147528738]
+offset_left = -21.0
+offset_top = 2.0
+offset_right = 19.0
+offset_bottom = 25.0
+text = "E"
+
+[node name="Camera2" type="Camera2D" parent="." unique_id=1698854839]
+
+[connection signal="body_entered" from="CollisionShape2D/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="CollisionShape2D/Area2D" to="." method="_on_area_2d_body_exited"]

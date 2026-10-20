@@ -1,47 +1,26 @@
 [gd_scene format=3 uid="uid://dem5xqcsi4w4j"]
 
-[ext_resource type="Script" uid="uid://cwlejjvxo2da8" path="res://player.gd" id="1_kpjcp"]
-[ext_resource type="Texture2D" uid="uid://tnh3ewnemui" path="res://kenney_monochrome-pirates/Default/Tiles/tile_0126.png" id="2_kne1u"]
-[ext_resource type="Script" uid="uid://byei3k03h1esu" path="res://raft.gd" id="3_e80uo"]
-[ext_resource type="Texture2D" uid="uid://pesy40yl55wm" path="res://kenney_monochrome-pirates/Default/Tiles/tile_0101.png" id="4_cxr5p"]
+[ext_resource type="Script" uid="uid://cwlejjvxo2da8" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://tnh3ewnemui" path="res://kenney_monochrome-pirates/Default/Tiles/tile_0126.png" id="2_i3pqv"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tdg3f"]
-load_path = "res://.godot/imported/tile_0100.png-85004c765d371e9e73e243ef57b41a5e.ctex"
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ncpa"]
-size = Vector2(44.125, 21.25)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhp63"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_trn2v"]
 radius = 9.0
 height = 32.0
 
-[node name="Objects" type="Node2D" unique_id=1448222118]
+[node name="Player" type="CharacterBody2D" unique_id=619771043]
+collision_mask = 3
+script = ExtResource("1_onrkg")
 
-[node name="Raft" type="CharacterBody2D" parent="." unique_id=637325558]
-script = ExtResource("3_e80uo")
-
-[node name="Sprite2D" type="Sprite2D" parent="Raft" unique_id=474211585]
-position = Vector2(-28.374992, 38.374996)
-scale = Vector2(1.2968739, 1.3281249)
-texture = SubResource("CompressedTexture2D_tdg3f")
-
-[node name="Sprite2D" type="Sprite2D" parent="Raft/Sprite2D" unique_id=1851336012]
-position = Vector2(17.806452, -3.8146973e-06)
-scale = Vector2(1.2326103, 0.9802089)
-texture = ExtResource("4_cxr5p")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Raft" unique_id=757274098]
-position = Vector2(-17.0625, 38.375)
-shape = SubResource("RectangleShape2D_5ncpa")
-
-[node name="Player" type="CharacterBody2D" parent="." unique_id=2071386349]
-script = ExtResource("1_kpjcp")
-
-[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=927732390]
-position = Vector2(-4.8749967, -3.624998)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=618832976]
+position = Vector2(400, 400)
 scale = Vector2(1.2343745, 1.5781249)
-texture = ExtResource("2_kne1u")
+texture = ExtResource("2_i3pqv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=829474199]
-position = Vector2(-5, -2)
-shape = SubResource("CapsuleShape2D_qhp63")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=668865939]
+position = Vector2(400, 400)
+shape = SubResource("CapsuleShape2D_trn2v")
+
+[node name="Camera" type="Camera2D" parent="." unique_id=1336780968]
+position = Vector2(400.00003, 400.00003)
+scale = Vector2(1.0000001, 1.0000001)
+zoom = Vector2(2, 2)
