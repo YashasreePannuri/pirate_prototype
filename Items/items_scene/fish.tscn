@@ -23,5 +23,6 @@ offset_top = 48.0
 offset_right = 83.0
 offset_bottom = 85.0
 disabled = true
+action_mode = 0
 
 [node name="Timer" type="Timer" parent="." unique_id=141459493]
