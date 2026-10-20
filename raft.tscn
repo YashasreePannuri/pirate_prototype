@@ -44,5 +44,7 @@ offset_right = 19.0
 offset_bottom = 25.0
 text = "E"
 
+[node name="Camera2" type="Camera2D" parent="." unique_id=1698854839]
+
 [connection signal="body_entered" from="CollisionShape2D/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="CollisionShape2D/Area2D" to="." method="_on_area_2d_body_exited"]
