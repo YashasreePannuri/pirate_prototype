@@ -4,8 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://ddyjvfduvvrk8" path="res://island.tscn" id="2_cm0pq"]
 [ext_resource type="PackedScene" uid="uid://cfdri8bcalr2l" path="res://island_2.tscn" id="4_cm0pq"]
 [ext_resource type="PackedScene" uid="uid://bqg14kmqoheey" path="res://raft.tscn" id="5_lgr22"]
-[ext_resource type="PackedScene" uid="uid://dem5xqcsi4w4j" path="res://player.tscn" id="6_3dxm6"]
+[ext_resource type="PackedScene" uid="uid://dem5xqcsi4w4j" path="res://Player.tscn" id="6_3dxm6"]
 [ext_resource type="PackedScene" uid="uid://keov44fxx27l" path="res://player2.tscn" id="6_lgr22"]
+[ext_resource type="PackedScene" uid="uid://do1824dx65l6k" path="res://scenes/dialogue_manager.tscn" id="7_lgr22"]
+[ext_resource type="PackedScene" uid="uid://h3yghqpnugum" path="res://scenes/dialogue_manager2.tscn" id="8_trn2v"]
 
 [node name="Main" type="Node2D" unique_id=1235547916]
 
@@ -24,4 +26,8 @@ position = Vector2(223, -41)
 position = Vector2(113, 92)
 
 [node name="Player2" parent="." unique_id=1306666116 instance=ExtResource("6_lgr22")]
-position = Vector2(-1042, 847)
+position = Vector2(-1041, 849)
+
+[node name="Player_Dialogue" parent="." unique_id=546855103 instance=ExtResource("7_lgr22")]
+
+[node name="Player2_Dialogue" parent="." unique_id=435420466 instance=ExtResource("8_trn2v")]

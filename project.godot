@@ -57,6 +57,7 @@ interaction={
 2d_physics/layer_1="islands"
 2d_physics/layer_2="player"
 2d_physics/layer_3="raft"
+2d_physics/layer_4="ocean"
 
 [physics]
 

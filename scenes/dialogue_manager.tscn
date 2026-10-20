@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://do1824dx65l6k"]
 
-[ext_resource type="Script" uid="uid://n0jn4ovay5vj" path="res://dialogue_manager.gd" id="1_jbixp"]
+[ext_resource type="Script" uid="uid://n0jn4ovay5vj" path="res://scenes/dialogue_manager.gd" id="1_jbixp"]
 [ext_resource type="Texture2D" uid="uid://cd7mc3geydkq1" path="res://kenney_monochrome-pirates/Default/Tiles/pirate1_256p.png" id="2_516v5"]
 
 [sub_resource type="FontFile" id="FontFile_jbixp"]

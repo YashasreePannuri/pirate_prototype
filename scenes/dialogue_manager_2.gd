@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+signal dialogue_finished
+
 @onready var dialogue_box: Control = $DialogueBox
 @onready var dialogue_text: Label = $DialogueBox/DialogueText
 
@@ -10,12 +12,7 @@ var is_dialogue_active: bool = false
 func _ready() -> void:
 	dialogue_box.visible = false
 	
-	start_dialogue(["Where am I?",
-	"why am i in the middle of the ocean?",
-	"oh no, my crew has abandonded me :(",
-	"i need to get to safety"])
-	
-func start_dialogue(lines: Array[String]):
+func start_dialogue2(lines: Array[String]):
 	get_tree().paused = true
 	
 	dialogue_lines = lines
@@ -39,6 +36,5 @@ func advance_dialogue():
 		get_tree().paused = false
 		is_dialogue_active = false
 		dialogue_box.visible = false
-	
-	
+		dialogue_finished.emit()
 	
