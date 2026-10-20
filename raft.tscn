@@ -13,6 +13,8 @@ size = Vector2(44.125, 21.25)
 size = Vector2(61, 34)
 
 [node name="Raft" type="CharacterBody2D" unique_id=771783723]
+collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_llxdh")
 
 [node name="RaftImage" type="Sprite2D" parent="." unique_id=1072424757]
@@ -45,10 +47,11 @@ offset_bottom = 25.0
 text = "E"
 
 [node name="Label2" type="Label" parent="." unique_id=2060643146]
-offset_left = -17.5
-offset_top = 37.0
-offset_right = 22.5
-offset_bottom = 60.0
+offset_left = -94.0
+offset_top = 2.0
+offset_right = 68.0
+offset_bottom = 25.0
+text = "Press E to disembark"
 
 [node name="Camera2" type="Camera2D" parent="." unique_id=1698854839]
 zoom = Vector2(2, 2)

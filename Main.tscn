@@ -11,7 +11,7 @@
 
 [node name="Ocean" parent="." unique_id=946612665 instance=ExtResource("1_r0du0")]
 
-[node name="Island" parent="." unique_id=1908697329 instance=ExtResource("2_cm0pq")]
+[node name="Island1" parent="." unique_id=1908697329 instance=ExtResource("2_cm0pq")]
 position = Vector2(-253, 9)
 script = ExtResource("3_cm0pq")
 
