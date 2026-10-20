@@ -1,12 +1,10 @@
 [gd_scene format=3 uid="uid://b0np7wtansh14"]
 
-[ext_resource type="Script" uid="uid://bcoya5awcxw4n" path="res://Inventory/item_slot.gd" id="1_0myub"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n6cxc"]
-load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+[ext_resource type="Script" uid="uid://bcoya5awcxw4n" path="res://Inventory/item_slot.gd" id="1_v1eto"]
+[ext_resource type="Texture2D" uid="uid://ducxraqd3vwkf" path="res://kenney_monochrome-rpg/Default/Tiles/tile_0106.png" id="2_fug2p"]
 
 [node name="ItemSlot" type="Node2D" unique_id=753349714]
-script = ExtResource("1_0myub")
+script = ExtResource("1_v1eto")
 
 [node name="slot" type="ColorRect" parent="." unique_id=2117837289]
 offset_left = -19.0
@@ -15,10 +13,10 @@ offset_right = 21.0
 offset_bottom = 21.0
 
 [node name="item_icon" type="Sprite2D" parent="." unique_id=622906192]
-self_modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0.98800004)
 position = Vector2(1.000001, 0.50000095)
-scale = Vector2(0.3125, 0.3203125)
-texture = SubResource("CompressedTexture2D_n6cxc")
+scale = Vector2(2.935, 3)
+texture = ExtResource("2_fug2p")
 
 [node name="Button" type="Button" parent="." unique_id=615002006]
 self_modulate = Color(1, 1, 1, 0)

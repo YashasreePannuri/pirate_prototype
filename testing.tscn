@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b0cu0w3kc81jy" path="res://Inventory/inventory.tscn" id="1_qrja6"]
 [ext_resource type="PackedScene" uid="uid://di4dqjfbmopg7" path="res://Items/items_scene/fish.tscn" id="2_co24e"]
+[ext_resource type="Script" uid="uid://da7f4bwidy634" path="res://hand.gd" id="3_feb8i"]
 
 [node name="Testing" type="Node2D" unique_id=421747174]
 
@@ -11,4 +12,7 @@
 
 [node name="Fish" parent="." unique_id=1224243082 instance=ExtResource("2_co24e")]
 
-[node name="Fish2" parent="." unique_id=359458509 instance=ExtResource("2_co24e")]
+[node name="Hand" type="Node2D" parent="." unique_id=2064411770]
+script = ExtResource("3_feb8i")
+
+[node name="Item_Icon" type="Sprite2D" parent="Hand" unique_id=901691035]
