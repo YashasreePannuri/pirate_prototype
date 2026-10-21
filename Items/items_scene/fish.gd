@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var item_res : Item
-@onready var inv: Node2D = $"../Inventory"
+@onready var inv: Node2D = $"../inventory_holder/Inventory"
 
 
 # Called when the node enters the scene tree for the first time.

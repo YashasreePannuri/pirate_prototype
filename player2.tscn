@@ -15,6 +15,7 @@ texture = ExtResource("1_i25i0")
 shape = SubResource("CapsuleShape2D_rihsh")
 
 [node name="Button" type="Button" parent="." unique_id=1404712013]
+self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

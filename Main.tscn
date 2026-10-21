@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://keov44fxx27l" path="res://player2.tscn" id="6_lgr22"]
 [ext_resource type="PackedScene" uid="uid://do1824dx65l6k" path="res://scenes/dialogue_manager.tscn" id="7_lgr22"]
 [ext_resource type="PackedScene" uid="uid://h3yghqpnugum" path="res://scenes/dialogue_manager2.tscn" id="8_trn2v"]
+[ext_resource type="PackedScene" uid="uid://b0cu0w3kc81jy" path="res://Inventory/inventory.tscn" id="9_03owx"]
+[ext_resource type="PackedScene" uid="uid://di4dqjfbmopg7" path="res://Items/items_scene/fish.tscn" id="10_wkp8b"]
+[ext_resource type="PackedScene" uid="uid://b0otwvxt70r46" path="res://Items/items_scene/medicine.tscn" id="11_20pc6"]
 
 [node name="Main" type="Node2D" unique_id=1235547916]
 
@@ -31,3 +34,14 @@ position = Vector2(-1041, 849)
 [node name="Player_Dialogue" parent="." unique_id=546855103 instance=ExtResource("7_lgr22")]
 
 [node name="Player2_Dialogue" parent="." unique_id=435420466 instance=ExtResource("8_trn2v")]
+
+[node name="Fish" parent="." unique_id=1224243082 instance=ExtResource("10_wkp8b")]
+position = Vector2(555, 267)
+
+[node name="inventory_holder" type="CanvasLayer" parent="." unique_id=105319430]
+
+[node name="Inventory" parent="inventory_holder" unique_id=2119538027 instance=ExtResource("9_03owx")]
+position = Vector2(908, 57)
+
+[node name="Medicine" parent="." unique_id=260194141 instance=ExtResource("11_20pc6")]
+position = Vector2(-1509, 711)

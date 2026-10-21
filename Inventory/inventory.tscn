@@ -6,7 +6,7 @@
 script = ExtResource("1_pohso")
 
 [node name="Slot" type="Panel" parent="." unique_id=1015166323]
-offset_left = -81.0
-offset_top = -84.0
-offset_right = 385.0
-offset_bottom = 185.0
+offset_left = -50.0
+offset_top = -45.0
+offset_right = 123.0
+offset_bottom = 41.0
