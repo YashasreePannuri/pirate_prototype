@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b0cu0w3kc81jy" path="res://Inventory/inventory.tscn" id="9_03owx"]
 [ext_resource type="PackedScene" uid="uid://di4dqjfbmopg7" path="res://Items/items_scene/fish.tscn" id="10_wkp8b"]
 [ext_resource type="PackedScene" uid="uid://b0otwvxt70r46" path="res://Items/items_scene/medicine.tscn" id="11_20pc6"]
+[ext_resource type="Script" uid="uid://da7f4bwidy634" path="res://hand.gd" id="12_5vvyt"]
 
 [node name="Main" type="Node2D" unique_id=1235547916]
 
@@ -45,3 +46,8 @@ position = Vector2(908, 57)
 
 [node name="Medicine" parent="." unique_id=260194141 instance=ExtResource("11_20pc6")]
 position = Vector2(-1509, 711)
+
+[node name="Hand" type="Node2D" parent="." unique_id=1139797183]
+script = ExtResource("12_5vvyt")
+
+[node name="Item_Icon" type="Sprite2D" parent="Hand" unique_id=663623202]
